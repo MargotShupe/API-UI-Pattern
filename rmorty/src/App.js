@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Characters from "./Components/Characters";
 import Pages from "./Components/Pages";
-import { Modals } from "./Components/Modals";
+//import { Modals } from "./Components/Modals";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -46,7 +46,6 @@ function App() {
           onPrevious={onPrevious}
           onNext={onNext}
         />
-        <Modals />
       </div>
     </>
   );
