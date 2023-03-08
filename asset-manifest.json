@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/API-UI-Pattern/static/css/main.abd64e84.css",
+    "main.js": "/API-UI-Pattern/static/js/main.3e1f0356.js",
+    "index.html": "/API-UI-Pattern/index.html",
+    "main.abd64e84.css.map": "/API-UI-Pattern/static/css/main.abd64e84.css.map",
+    "main.3e1f0356.js.map": "/API-UI-Pattern/static/js/main.3e1f0356.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.3e1f0356.js"
+  ]
+}
