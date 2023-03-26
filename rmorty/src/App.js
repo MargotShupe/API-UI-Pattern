@@ -3,12 +3,16 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Characters from "./Components/Characters";
 import Pages from "./Components/Pages";
-//import { Modals } from "./Components/Modals";
+import Modal from "./Components/Modal";
 
 function App() {
   const [characters, setCharacters] = useState([]);
 
   const [info, setInfo] = useState({});
+
+  //const [showPop, setShowPop] = useState(false);
+
+  const [modal, setModal] = useState({});
 
   const initialUrl = "https://rickandmortyapi.com/api/character";
 
@@ -40,6 +44,7 @@ function App() {
 
       <div className="container mt-5">
         <Characters characters={characters} />
+        <Modal modal={modal} />
         <Pages
           prev={info.prev}
           next={info.next}
