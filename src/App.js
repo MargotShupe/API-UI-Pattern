@@ -1,14 +1,60 @@
+import { useEffect, useState } from "react";
+import Characters from "./Components/Characters";
+import "./index";
 import "./App.css";
+
+export default function App() {
+  const url = "https://rickandmortyapi.com/api/character/";
+  const [characters, setCharacters] = useState([]);
+  const [info, setInfo] = useState({});
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setCharacters(data.results);
+        setInfo(data.info);
+      });
+  }, []);
+
+  console.log(characters);
+
+  return (
+    <div>
+      <h1>Rick and Morty</h1>
+      <Characters characters={characters} />
+    </div>
+  );
+}
+
+///previous code
+/*{characters.length > 0 ? 
+        (
+          <ul>
+            { characters.map(( characters, i ) => <li key={i}>{characters.name}</li>) }
+          </ul>
+        )
+        : <p>Loading...</p>
+      }
+ 
+*/
+
+//import Pages from './Components/Pages';
+
+/*import "./App.css";
 import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Characters from "./Components/Characters";
 import Pages from "./Components/Pages";
-//import { Modals } from "./Components/Modals";
 
 function App() {
   const [characters, setCharacters] = useState([]);
 
   const [info, setInfo] = useState({});
+
+  //const [showPop, setShowPop] = useState(false);
+
+  //const [modal, setModal] = useState(false);
 
   const initialUrl = "https://rickandmortyapi.com/api/character";
 
@@ -40,6 +86,7 @@ function App() {
 
       <div className="container mt-5">
         <Characters characters={characters} />
+
         <Pages
           prev={info.prev}
           next={info.next}
@@ -52,3 +99,4 @@ function App() {
 }
 
 export default App;
+*/
